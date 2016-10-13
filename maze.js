@@ -14,6 +14,7 @@ window.onload = function () {
 					maze[z].setAttribute("class", "boundary youlose");
 				}
 				win=false;
+				document.getElementById("status").innerHTML="You Lose!";
 			});
 	}
 	
@@ -24,6 +25,7 @@ window.onload = function () {
 			maze[z].setAttribute("class", "boundary");
 		}
 		win=true;
+		document.getElementById("status").innerHTML="Move your mouse over the \"S\" to begin.";
 	});
 		
 		
@@ -31,7 +33,8 @@ window.onload = function () {
 	{
 		if(win)
 		{
-			alert("You win!");
+			//alert("You win!");
+			document.getElementById("status").innerHTML="You win!";
 		}
 	});
 }
